@@ -1,0 +1,37 @@
+題目 From YOLOv4,YOLOv7, to YOLOv9 Mark Liao SINCE 1982
+作者 : 廖弘源特聘研究員
+日期 : 20250401
+
+Scientist vs Engineer
+  ㆍScientists use systematic methods to solve long-term problems
+  ㆍEngineers use existing methods to solve current problems
+
+Consensuses of the team:
+(1) Select real-world issues given by industry;
+(2) Try to introduce science into problem-solving process
+
+The Objectives of this MOST sponsored Project
+ㆍBring academic research and development capabilities into industry
+ㆍCommercialize artificial intelligence technology, let the products enter the international market
+ㆍ Let the world see Taiwan
+
+Development process and phased goals
+ㆍ Traffic flow analysis (2018.6~) Traffic flow analysis
+ㆍVehicle queue analysis (2019.6~) Vehicle queue analysis
+ㆍ Road network traffic signal control (2019~) Traffic signal control
+
+物件偵測幾乎是所有領域相關研究的第一步 以深度學習為基礎的物件偵測是如何開始的?
+常見的作法 : edge detection，希望為形成封閉曲線做准備，方便未來segmentation工作順利進行
+
+設計的考量及策略
+  ・必須是lightweight 效能必須快又准
+  ・必須要能適用於cloud，local(ex.Notebook)，and edge (ex. Cell phone)
+  ・先 survey 現存的 State-of-the-art 物件
+設計物件偵測系統需考量的基本議題
+  ㆍSome issues need to be considered 
+    1、network architecture
+    2、feature integration method 
+    3、detection method
+    4、loss function
+    5、label assignment method
+    6、training method
