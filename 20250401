@@ -1,4 +1,4 @@
-題目 From YOLOv4,YOLOv7, to YOLOv9 Mark Liao SINCE 1982
+題目 From YOLOv4,YOLOv7,to YOLOv9 Mark Liao SINCE 1982
 作者 : 廖弘源特聘研究員
 日期 : 20250401
 
@@ -24,9 +24,9 @@ Development process and phased goals
 常見的作法 : edge detection，希望為形成封閉曲線做准備，方便未來segmentation工作順利進行
 
 設計的考量及策略
-  ・必須是lightweight 效能必須快又准
-  ・必須要能適用於cloud，local(ex.Notebook)，and edge (ex. Cell phone)
-  ・先 survey 現存的 State-of-the-art 物件
+  ・必須是lightweight;效能必須快又准
+  ・必須要能適用於cloud,local(ex.Notebook),and edge (ex. Cell phone)
+  ・先survey現存的State-of-the-art物件
 設計物件偵測系統需考量的基本議題
   ㆍSome issues need to be considered 
     1、network architecture
@@ -35,3 +35,19 @@ Development process and phased goals
     4、loss function
     5、label assignment method
     6、training method
+Resnet-50 : 在layer level "隨意"挑七層用masking 設法達成parameter 及 connection 數目增加 diversity of combinations
+Layer level design (partial residual network, May-June 2018) :  Layer level design 完全使用 masking 組合實現
+Variation of Partial Residual Network : Cut down computations and parameters, maintain connections,increase gradient combinations
+Model scaling會受那些因素牽動?
+ㆍPossible scaling factors include :
+  - resolution (size of input image)
+  - depth (no. of layers)
+  - width (no. of channels)
+  - stage (no. of feature pyramids)
+to achieve a good trade-off for the amount of network parameters,computation, inference speed,and accuray
+
+應用領域 : 
+  ㆍ細胞有絲分裂檢測，追蹤和譜系
+  ㆍ噬菌體培養皿監測
+  ㆍ血球偵測
+  ㆍ骨折偵測
